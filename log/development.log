@@ -1,0 +1,54 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-04-24 23:50:12 +0200
+Served asset /rails.png - 200 OK (6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-04-24 23:51:10 +0200
+Processing by BlogController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'blogs'):
+  app/controllers/blog_controller.rb:3:in `new'
+  app/controllers/blog_controller.rb:3:in `index'
+
+
+  Rendered /Users/kiszal/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/kiszal/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/kiszal/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-04-24 23:52:04 +0200
+Processing by BlogController#index as HTML
+  Rendered blog/index.html.erb within layouts/application (0.8ms)
+Compiled blog.css  (8ms)  (pid 42207)
+Compiled application.css  (32ms)  (pid 42207)
+Compiled jquery.js  (2ms)  (pid 42207)
+Compiled jquery_ujs.js  (0ms)  (pid 42207)
+Compiled blog.js  (113ms)  (pid 42207)
+Compiled application.js  (158ms)  (pid 42207)
+Completed 200 OK in 296ms (Views: 296.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-24 23:52:04 +0200
+Served asset /application.css - 200 OK (11ms)
+
+
+Started GET "/assets/blog.css?body=1" for 127.0.0.1 at 2012-04-24 23:52:04 +0200
+Served asset /blog.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-24 23:52:04 +0200
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-24 23:52:04 +0200
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/blog.js?body=1" for 127.0.0.1 at 2012-04-24 23:52:04 +0200
+Served asset /blog.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-24 23:52:04 +0200
+Served asset /jquery_ujs.js - 200 OK (4ms)
