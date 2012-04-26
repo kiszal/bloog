@@ -26,5 +26,22 @@ describe Blog do
       @it.new_post.blog.must_equal @it
     end
 
+    it "accepts and attribute on behalf of the post maker" do 
+      post_source = MiniTest::Mock.new
+      post_source.expect :call, @new_post, [{title: 'title'}]
+      @it.post_source = post_source
+      @it.new_post({title: 'title'})
+      post_source.verify
+    end
   end
+   
+  describe "#add_entry" do 
+    it "adds an entry to the blog" do
+      entry = Object.new
+      @it.add_entry(entry)
+      @it.entries.must_include(entry)
+    end
+  end
+
+
 end
