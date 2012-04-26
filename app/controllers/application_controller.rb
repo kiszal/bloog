@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
   private
 
   def init_blog
-    @blog = Blog.new
+    @blog = THE_BLOG 
   end
-
 end

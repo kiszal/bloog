@@ -7,18 +7,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
 
-  <div class="sidebar two columns"> 
-    <nav> 
-      <ul> 
-        <li>
-        <%= link_to "New post...", new_post_path %>
-        </li> 
-      </ul> 
-    </nav> 
+    <div class="sidebar two columns"> 
+      <nav> 
+        <ul> 
+          <li>
+            <%= link_to "New post...", new_post_path %>
+          </li> 
+        </ul> 
+      </nav> 
+    </div>
+
+    <div class="banner sixteen columns clearfix">
+	    <% if flash[:notice] %>
+	      <p class="notice"><%= flash[:notice] %></p>
+	    <% end %>
+	    <% if flash[:error] %>
+	      <p class="error"><%= flash[:error] %></p>
+	    <% end %>
+    </div>
+
+    <div class="content ten columns">
+      <%= yield %>
+    </div>
   </div>
-
-<%= yield %>
 
 </body>
 </html>
+
+
